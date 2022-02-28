@@ -1,8 +1,49 @@
 /* CSS RULES */
 
-h1, h2, h3, h4, p, li {
+/* universal selector */
+* {
+    /* HAS THE LOWEST PRIORITY */
+    margin:0;
+    padding:0;
+    /* resets the margins for the project */
+}
+
+body{
     font-family: sans-serif;
     color: rgba(44,44,44);
+
+    border-top: 10px solid lightblue ;
+}
+
+.main-header {
+    background-color:#f7f7f7;
+    /* padding :20px;
+    padding-left: 40px;
+    padding-right: 40px; */
+    padding: 20px 40px;
+    margin-bottom: 60px;
+}
+
+.post-header{
+    margin-bottom: 40px;
+
+}
+
+nav {
+    font-size: 18px;
+}
+
+article {
+    margin-bottom: 60px;
+}
+
+aside {
+    background-color:#f7f7f7;
+    border-top: 5px solid rgba(1, 39, 39, 0.733);
+    border-bottom: 5px solid rgba(1, 39, 39, 0.733);
+    /* padding-top: 50px;
+    padding-bottom: 50px; */
+    padding: 50px 0;
 }
 
 h1, h2, h3 {
@@ -18,10 +59,13 @@ h1 {
 
 h2 {
     font-size: 40px;
+    margin-bottom: 30px;
 }
 
 h3 {
     font-size: 30px;
+    margin-bottom: 20px;
+    margin-top: 40px;
 }
 
 h4 {
@@ -34,10 +78,23 @@ p {
     font-size: 22px;
     /* 'line height' is 1.5 times the font height */
     line-height: 1.5;
+    margin-bottom: 50px;
+
+}
+
+ol, 
+ul {
+    margin-left: 50px;
+    margin-bottom: 20px;
 }
 
 li {
     font-size: 20px;
+    margin-bottom: 10px;
+}
+
+li:last-child{
+    margin-bottom: 0;
 }
 
 /* descendant selector, p element is a child element of the footer */
@@ -70,19 +127,10 @@ li {
     list-style: none;
 }
 
-main-header {
-    background-color: #f7f7f7;
-}
 
-aside {
-    background-color:#f7f7f7;
-    border-top: 5px solid rgba(1, 39, 39, 0.733);
-    border-bottom: 5px solid rgba(1, 39, 39, 0.733);
-}
-
-body {
-    /* background-color:lightcyan; */
-}
+/* body { 
+    /* background-color:lightcyan; 
+} */
 
 /* .first-li {
     font-weight: bold;
@@ -134,3 +182,27 @@ a:active{
     background-color:black;
     font-style: italic;
 }
+
+/* resolving conflicts */
+/* #copyright{
+    color: red;
+}
+
+.copyright{
+    color:blue;
+}
+
+.text{
+    color:yellow;
+}
+
+footer p{
+    color:green;
+} */
+
+/* nav a:link,
+nav p{
+    font-size: 18px;
+} */
+
+
