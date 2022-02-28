@@ -1,1 +1,86 @@
 
+/* CSS RULES */
+
+h1, h2, h3, h4, p, li {
+    font-family: sans-serif;
+    color: rgba(44,44,44);
+}
+
+h1, h2, h3 {
+    color: rgba(1, 39, 39, 0.733);
+}
+
+h1 {
+    /*delcaration block */
+    font-size: 26px;
+    text-transform: uppercase;
+    font-style: italic;
+  }
+
+h2 {
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+h4 {
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+p {
+    font-size: 22px;
+    /* 'line height' is 1.5 times the font height */
+    line-height: 1.5;
+}
+
+li {
+    font-size: 20px;
+}
+
+/* descendant selector, p element is a child element of the footer */
+/* footer p {
+    font-size: 16px;
+} */
+
+/* avoid, as this can lead to encoding problems when HTML doc is changened */
+/* article header p {
+    font-style: italic;
+} */
+
+/* # is the ID selector */
+#author {
+    font-style: italic;
+    font-size: 18px;
+}
+
+#copyright {
+    font-size: 16px;
+}
+
+/* the . is the 'Class selector' */
+.related-author {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.related {
+    list-style: none;
+}
+
+main-header {
+    background-color: #f7f7f7;
+}
+
+aside {
+    background-color:#f7f7f7;
+    border-top: 5px solid rgba(1, 39, 39, 0.733);
+    border-bottom: 5px solid rgba(1, 39, 39, 0.733);
+}
+
+body {
+    /* background-color:lightcyan; */
+}
