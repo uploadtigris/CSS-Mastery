@@ -13,6 +13,8 @@ body{
     color: rgba(44,44,44);
 
     border-top: 10px solid lightblue ;
+    position:relative; 
+    /*must relative so the absolutely positioned like button will stay at bottom*/
 }
 
 .container{
@@ -214,6 +216,46 @@ nav a:link {
 
 nav a:link:last-child{
     margin-right:0;
+}
+
+button {
+    font-size: 22px;
+    padding: 20px;
+    cursor: pointer; /* makes glove hand when hover*/
+
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+}
+
+/* sudo-element */
+h1::first-letter {
+    font-style: normal;
+    margin-right: 5px;
+}
+
+/* adjacent sibling selector */
+h3 + p::first-line{
+    /**/
+}
+
+h2 {
+    /* background-color: orange; */
+    /* must give parent element relative so child can be absolute. */
+    position: relative;
+}
+
+h2::after {
+    content: "TOP";
+    background-color: yellow;
+    color:#000;
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 5px 10px;
+    position: absolute;
+    top: -15px;
+    right: -25px;
 }
 
 /* resolving conflicts */
