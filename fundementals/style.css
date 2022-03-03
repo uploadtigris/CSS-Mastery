@@ -200,6 +200,22 @@ a:active{
     /*only needed if the height is already specfied in HMTL*/
 }
 
+nav a:link {
+    /* background-color: orangered;
+    margin: 20px;
+
+    /// turns the inline element into an inline element. 
+    display: block; */
+
+    margin-right: 30px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+nav a:link:last-child{
+    margin-right:0;
+}
+
 /* resolving conflicts */
 /* #copyright{
     color: red;
