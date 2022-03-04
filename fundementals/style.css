@@ -6,6 +6,10 @@
     margin:0;
     padding:0;
     /* resets the margins for the project */
+
+    /* With box-sizing; widths set for content objects will be the resulting object rather than additonal padding adding to the total width. */
+    box-sizing: border-box;
+    /* very commonly used */
 }
 
 body{
@@ -18,7 +22,7 @@ body{
 }
 
 .container{
-    width: 700px;
+    width: 1200px;
     /*this centers the container*/
     /* margin-left: auto;
     margin-right: auto; */
@@ -33,7 +37,7 @@ body{
     padding-right: 40px; */
     padding: 20px 40px;
     margin-bottom: 60px;
-    height: 80px;
+    /* height: 80px; */
 }
 
 .post-header{
@@ -53,10 +57,7 @@ aside {
     background-color:#f7f7f7;
     border-top: 5px solid rgba(1, 39, 39, 0.733);
     border-bottom: 5px solid rgba(1, 39, 39, 0.733);
-    /* padding-top: 50px;
-    padding-bottom: 50px; */
-    padding: 50px 0;
-    width: 500px;
+    padding: 50px 40px;
 }
 
 h1, h2, h3 {
@@ -85,6 +86,7 @@ h4 {
     font-size: 20px;
     text-transform: uppercase;
     text-align: center;
+    margin-bottom: 30px;
 }
 
 p {
@@ -138,6 +140,7 @@ li:last-child{
 
 .related {
     list-style: none;
+    margin-left: 0;
 }
 
 
@@ -159,9 +162,9 @@ li:last-child{
 }
 
 /* you can use numbers or "odd/even" */
-li:nth-child(3){
-    /* color:red; */
-}
+/* li:nth-child(3){
+    /* color:red; 
+} */
 
 /* is not the first child or article so nothing happens */
 article p:first-child{
@@ -235,9 +238,9 @@ h1::first-letter {
 }
 
 /* adjacent sibling selector */
-h3 + p::first-line{
-    /**/
-}
+/* h3 + p::first-line{
+
+} */
 
 h2 {
     /* background-color: orange; */
@@ -280,5 +283,52 @@ nav p{
     font-size: 18px;
 } */
 
+/* FLOATs */
+
+.author-img{
+    float:left;
+    margin-bottom: 20px;
+}
+
+.author{
+    /*wallows the element to be placed at the right side of container*/
+    float: left;
+    padding-top: 10px;
+    margin-left: 20px;
+}
+
+/*float-layouts are outdated*/
+
+h1 {
+    float: left;
+}
+
+nav {
+    float: right;
+}
+
+
+
+/* CLEAR FIX HACK */
+/* creats a new element that is the last child element in the container. */
+.clearfix::after{
+    clear: both;
+    content:"";
+    display:block;
+} 
+
+article {
+    width: 825px;
+    float: left;
+}
+
+aside {
+    width: 300px;
+    float: right;
+}
+
+footer {
+     clear: both;
+}
 
 
