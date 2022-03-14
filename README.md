@@ -1,6 +1,4 @@
 # CSS-Mastery
-All fluff files while I learn CSS
-
 *** THESE ITEMS WERE BUILT ALONGSIDE A UDEMY COURSE ***
 
 Converse Challenge Codepen : https://codepen.io/uploadtigris/pen/wvPYqGZ
