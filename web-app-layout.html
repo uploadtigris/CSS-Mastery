@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+            color: #666;
+            font-size: 24px;
+
+            /* this extends the entire height of the view */
+            height: 100vh;
+
+            /* this sets text align to center everywhere in the body */
+            text-align: center;
+            font-weight: bold;
+
+            /* use this as the container */
+            display: grid;
+            grid-template-columns: 80px 400px 1fr 250px;
+            grid-template-rows: 80px 1fr;
+        }
+
+        nav,
+        section,
+        main,
+        aside {
+            padding-top: 24px;
+        }
+
+        nav {
+            background-color: #666;
+            /* these rows span from the first to the last always. */
+            grid-row: 1 / -1;
+
+            color: #fff;
+        }
+
+        menu {
+            background-color: #7048e8;
+            grid-column: 2/ -1;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            /* top and bottom | left and right */
+            padding: 0 40px;
+        }
+
+        button {
+            display: inline-block;
+            font-size: 16px;
+            font-weight: bold;
+            background-color: #5f3dc4;
+            /* always remove the border; */
+            border: none;
+            cursor: pointer;
+            /* the button color is never inherited with buttons; */
+            color: #fff;
+            /* top and bottom | left and right */
+            padding: 8px 12px;
+        }
+
+        button:last-child {
+            background-color: #d6336c;
+
+            /* this puts the last element all the way to the right. */
+            margin-left: auto;
+        }
+
+        section {
+            background-color: #e9ecef;
+            padding: 40px;
+
+            /* this allows for the emails bigger than the column is now scrollable */
+            overflow: scroll;
+
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .Email {
+            background-color: #adb5bd;
+            height: 96px;
+
+            /* WE ONLY NEED THIS BECAUSE WE ARE USING FLEX BOX */
+            flex-shrink: 0;
+
+            /* flex box treats the text as a flex item which centers the text. */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* 
+            justify-content — controls alignment of all items on the main axis. 
+            align-items — controls alignment of all items on the cross axis.
+
+            The 'cross axis' runs perpendicular to the main axis
+             */
+        }
+
+        aside {
+            background-color: #e9ecef;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- mostly used for navigation bar with hyperlinks -->
+    <nav>Nav</nav>
+    <!-- this is only used for web apps which require a menu -->
+    <menu>
+        <button>New</button>
+        <button>Reply</button>
+        <button>Forward</button>
+        <button>Mark unread</button>
+        <button>Trash</button>
+    </menu>
+    <section>
+        <div class="Email">Email 1</div>
+        <div class="Email">Email 2</div>
+        <div class="Email">Email 3</div>
+        <div class="Email">Email 4</div>
+        <div class="Email">Email 5</div>
+        <div class="Email">Email 6</div>
+        <div class="Email">Email 7</div>
+        <div class="Email">Email 8</div>
+        <div class="Email">Email 9</div>
+        <div class="Email">Email 10</div>
+    </section>
+    <main>Email view</main>
+    <aside>Additional info</aside>
+</body>
+
+</html>
